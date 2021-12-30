@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" type="image/png" href="/assets/faviconluz.png">
+    <title>Portfolio Luz Brito</title>
+</head>
+<body>
+
+    <div id="app">      
+        
+        <nav>       
+            <div class="d-flex justify-content-evenly align-items-center" id="navbar" >
+                <div class="d-flex justify-content-between">
+                    <div class="navLogo d-flex ">
+                        <a href="index.html" class="">Port<span class="cOne">folio</span></a>
+                    </div>
+                    <div  class="containerMenu green borderXwidth d-flex align-items-center">                    
+                        <div class="navLinks nav-menu" id="nav-menu">
+                            <ul class="nav-list d-flex">                                
+                                <li class="nav-item"><a class="nav-link active" href="#home">HOME</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about">ABOUT ME</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#portfolio">PORTFOLIO</a>   </li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                            </ul>                                  
+                        </div>   
+                                         
+                    </div> 
+                                       
+                </div>
+                 <!-- nav btn -->
+                 <div class="nav-btns d-flex align-items-center">
+                    <div class="changeTheme">
+                        <div class="rotateIcon">
+                            <i class="bi bi-gear-fill change-theme fs-3" id="theme-button"></i>                    
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="language">                        
+                        <input type="checkbox" class="check" @click="language" id="language">                        
+                    </div> -->
+                    
+                    <button class="navbar-toggler btnNav px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i class="bi bi-list fs-1"></i>
+                    </button>                    
+                </div> 
+            </div> 
+               
+            <!-- responsive menu -->
+              <div class="offcanvas offcanvas-end navResponsive" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <div class="navLogo">
+                        <a href="index.html" class="">Port<span class="cOne">folio</span></a>
+                    </div>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><span>X</span> </button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">POTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT ME</a>
+                    </li>                   
+                  </ul>  
+                  <ul id="socialMedia" class="d-flex">
+                    <li>
+                        <a href="https://www.linkedin.com/in/maria-luz-brito/" target="_blank">
+                            <i class="bi bi-linkedin"></i>                    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/britomluz" target="_blank">
+                            <i class="bi bi-github"></i>                    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:britomluz@gmail.com" target="_blank">
+                            <i class="bi bi-envelope-fill"></i>                          
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/543513557206" target="_blank">
+                            <i class="bi bi-whatsapp"></i>                    
+                        </a>
+                    </li>
+                    
+                </ul>  
+                <div class="nameNav d-flex flex-column align-items-center mt-5">
+                    <h6 class="fs-2">María Luz Brito</h6>
+                    <h5 class="fs-5">Fullstack Java Developer</h5>
+                </div>              
+                </div>
+              </div>
+        </nav>
+        
+       <!-- home -->
+            <section id="home"  class="row d-flex flex-column align-items-center justify-content-center">     
+                <div class="home d-flex flex-column align-items-center justify-content-center">
+                    <div class="col-11 col-sm-8 col-lg-7">
+                            <!-- audio player -->
+                        <div class="audioPlayer d-flex flex-column align-items-start justify-content-center">
+                            <div class="mb-5 ">
+                                <small class="">Music makes everything better :) <span class="cOne">Enjoy it!</span></small>
+                            </div>
+                            <div class="music-container" id="music-container">
+                                <div class="music-info">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-music-note-list fs-2 cOne"></i>
+                                        <h4 id="title" class="px-2 cWhite"></h4>
+                                    </div>
+                                
+                                <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                                </div>
+                        
+                                <audio src="music/supergirl.mp3" id="audio"></audio>
+                        
+                                <div class="img-container">
+                                <img src="assets/supergirl.jpg" alt="music-cover" id="cover" />
+                                </div>
+                                <div class="navigation">
+                                <button id="prev" class="action-btn">
+                                    <i class="bi bi-caret-left-fill fs-2"></i>            
+                                </button>
+                                <button id="play" class="action-btn action-btn-big">
+                                    <i class="bi bi-play-circle-fill fs-1 cOne"></i>
+                                </button>
+                                <button id="next" class="action-btn">
+                                    <i class="bi bi-caret-right-fill fs-2"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- text -->
+                        <div class="d-flex flex-column align-items-start justify-content-center">
+                            <div class="textTitle col-12" data-aos="fade-down" data-aos-duration="800" data-aos-easing="ease-out">
+                                <span class="looking">Looking for innovation and </span>                   
+                                <span class="looking">extraordinary things?</span>  
+                                <h5 class="cTwo mt-5">Hi!</h5>
+                                <h5 class="cTwo">My name is </h5>
+                                <h2 class="cOne">María Luz Brito</h2>  
+                            </div>                
+                        </div>
+                     
+                    </div>                    
+                </div>        
+            </section>
+            
+            <h2 class="text">I'm a code designer</h2>
+            <div class="sectionHeader">            
+                <h2 class="innerText">I'm a code designer</h2>
+            </div>        
+
+        <!-- about me -->
+        <section id="about" class="containerAboutMe row d-flex flex-column align-items-center">
+           <div class="titleSection d-flex align-items-center justify-content-center col-12 col-lg-10">                             
+               <h3 data-aos="fade" data-aos-duration="400" data-aos-easing="ease-in" class="spanBig">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span>&nbsp;</span>
+                    <span>M</span>
+                    <span>E</span>
+               </h3>
+               <h2 data-aos="fade" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in" class="span">
+                   <span>A</span>
+                   <span>B</span>
+                   <span>O</span>
+                   <span>U</span>
+                   <span>T</span>
+                   <span>&nbsp;</span>
+                   <span>M</span>
+                   <span>E</span>
+               </h2>  
+           </div>
+           <div class="me d-flex flex-column align-items-center justify-content-center col-11 col-sm-6">
+                <small class="cTwo mt-4">What does  <span class="cOne">code designer</span> means?</small>
+                <div class="typing-text">
+                    <h4 class="mt-5 text-center">I'm a <span class="typed-text cOne"></span><span class="cursor cOne">&nbsp;</span></h4> 
+                </div>
+                
+                <div>
+                    <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200">
+                        <p>I´m a fullstack java developer with and avid passion for all things design and creativity related.
+                            Also, I´m a graphic designer with a focus on give solutions with intuitive navigation apps
+                            and a flow of thoughtfully-paced content.</p>
+                        <p>My fort is combines the best part of productivity, brand identity projects and development technologies to create
+                            web applications that provide an improvement in clients business.</p>
+                        <p>Like a developer and designer with a focus in usability, design and a <span class="cOne fw-bolder">special love for back-end programming languages</span> I strive to offer functional and professionals solutions to clients.</p>
+                        <p> My portfolio is quite diverse in range containing some things from programming 
+                            that I created while I was learning and some from my design work.</p>
+                        <p>I would prefer to let my work speak for itself so keep moving in this page and <span class="cTwo fw-bolder">feel free to have a flick through.</span></p>
+                    </div>
+                    
+                    <h5 class="text-center cOne mt-5">Let's talk</h5>
+                    <div id="socialMedia" class="d-flex">
+                        <li data-aos="flip-left" data-aos-duration="500" data-aos-easing="ease-out">
+                            <a href="mailto:britomluz@gmail.com" target="_blank">
+                                <i class="bi bi-envelope-fill"></i>                          
+                            </a>
+                        </li>
+                        <li data-aos="flip-left" data-aos-duration="700" data-aos-easing="ease-out">
+                            <a href="https://wa.me/543513557206" target="_blank">
+                                <i class="bi bi-whatsapp"></i>                    
+                            </a>
+                        </li>
+                    </div>
+                    <div class="myInterest">
+                        <h5 class="text-center cTwo mt-5">My interests</h5>
+                        <div class="d-flex justify-content-around flex-wrap mt-3">
+                            <div data-aos="flip-left" data-aos-duration="600" data-aos-easing="ease-out" class="text-center" >
+                                <i class="bi bi-palette-fill "></i>
+                                <p>Art</p>
+                            </div>
+                            <div data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="50" class="text-center" >
+                                <i class="bi bi-book-half"></i>
+                                <p>Books</p>
+                            </div>
+                            <div data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-delay="100" class="text-center" >
+                                <i class="bi bi-headphones"></i>
+                                <p>Music</p>
+                            </div>
+                            <div data-aos="flip-left" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="150" class="text-center" >
+                                <i class="bi bi-film"></i>
+                                <p>Series</p>
+                            </div>                            
+                            <div data-aos="flip-left" data-aos-duration="1500" data-aos-easing="ease-out" data-aos-delay="200" class="text-center" >
+                                <i class="bi bi-controller"></i>
+                                <p>Games</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+           </div>
+        </section>
+
+        <!-- skills -->
+        <section id="skills" class="containerSkills row d-flex flex-column align-items-center">
+            <div class="titleSection d-flex align-items-center justify-content-center col-12 col-lg-10">                             
+                <h3 class="spanBig" data-aos="fade" data-aos-duration="400" data-aos-easing="ease-in">
+                    <span>S</span>
+                    <span>K</span>
+                    <span>I</span>
+                    <span>L</span>
+                    <span>L</span>                 
+                    <span>S</span>                 
+                </h3>
+                <h2 class="span" data-aos="fade" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in">
+                    <span>S</span>
+                    <span>K</span>
+                    <span>I</span>
+                    <span>L</span>
+                    <span>L</span>                 
+                    <span>S</span>                 
+                </h2>  
+            </div>
+            
+            <!-- frontend -->
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="sk d-flex flex-column align-items-center col-12 col-sm-6">
+                  <h1>FRONT-END</h1>
+                  <div class="contSkills d-flex flex-wrap-reverse justify-content-evenly">
+                    <div data-aos="flip-left" data-aos-duration="600" data-aos-easing="ease-out" class="d-flex flex-column align-items-center mt-5">
+                      <small>HTML5</small>
+                      <div class="skills fend"><img src="/assets/front1.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="50" class="d-flex flex-column align-items-center mt-5">
+                      <small>CSS3</small>
+                      <div class="skills fend"><img src="/assets/front2.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-delay="100" class="d-flex flex-column align-items-center mt-5">
+                      <small>Bootstrap</small>
+                      <div class="skills fend"><img src="/assets/front3.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="150" class="d-flex flex-column align-items-center mt-5">
+                      <small>Javascript</small>
+                      <div class="skills fend"><img src="/assets/front4.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1500" data-aos-easing="ease-out" data-aos-delay="200" class="d-flex flex-column align-items-center mt-5">
+                      <small>VueJs</small>
+                      <div class="skills fend"><img src="/assets/front5.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1900" data-aos-easing="ease-out" data-aos-delay="250" class="d-flex flex-column align-items-center mt-5">
+                      <small>AngularJs</small>
+                      <div class="skills fend"><img src="/assets/front6.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="2300" data-aos-easing="ease-out" data-aos-delay="300" class="d-flex flex-column align-items-center mt-5">
+                      <small>Typescript</small>
+                      <div class="skills fend"><img src="/assets/front7.png" alt=""></div>
+                    </div>
+                  </div>
+                  
+                  <div class="textSkills fend">
+                    <p class="pt-5">I'm capable to build scalable softwares and produce accessible and elegants user experiences. </p>
+                  </div>
+                </div>   
+                     
+            </div>
+
+            <!-- backend -->
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="sk d-flex flex-column align-items-center col-12 col-sm-6">
+                  <h1>BACK-END</h1>
+                  <div class="contSkills d-flex flex-wrap-reverse justify-content-evenly">
+                    <div data-aos="flip-left" data-aos-duration="600" data-aos-easing="ease-out" class="d-flex flex-column align-items-center mt-5">
+                      <small>JAVA</small>
+                      <div class="skills bkend"><img src="/assets/back1.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="50" class="d-flex flex-column align-items-center mt-5">
+                      <small>Spring</small>
+                      <div class="skills bkend"><img src="/assets/back2.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-delay="100" class="d-flex flex-column align-items-center mt-5">
+                      <small>Spring Boot</small>
+                      <div class="skills bkend"><img src="/assets/back3.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="150" class="d-flex flex-column align-items-center mt-5">
+                      <small>Gradle</small>
+                      <div class="skills bkend"><img src="/assets/back4.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1500" data-aos-easing="ease-out" data-aos-delay="200" class="d-flex flex-column align-items-center mt-5">
+                      <small>API Rest</small>
+                      <div class="skills bkend"><img src="/assets/back6.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1900" data-aos-easing="ease-out" data-aos-delay="250" class="d-flex flex-column align-items-center mt-5">
+                      <small>Hibernate</small>
+                      <div class="skills bkend"><img src="/assets/back5.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="2300" data-aos-easing="ease-out" data-aos-delay="300" class="d-flex flex-column align-items-center mt-5">
+                      <small>PostgreSQL</small>
+                      <div class="skills bkend"><img src="/assets/back7.png" alt=""></div>
+                    </div>
+                  </div>
+                  
+                  <div class="textSkills bkend">
+                    <p class="pt-5">Experienced building API's RESTful. <span><b>I can transform complicated technical ideas into user-friendly applications.</b></span></p>
+                  </div>
+                </div>   
+                     
+            </div>
+
+            <!-- design -->            
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="sk d-flex flex-column align-items-center col-12 col-sm-6">
+                  <h1>DESIGN</h1>
+                  <div class="contSkills d-flex flex-wrap-reverse justify-content-evenly">
+                    <div data-aos="flip-left" data-aos-duration="600" data-aos-easing="ease-out" class="d-flex flex-column align-items-center mt-5">
+                      <small>Photoshop</small>
+                      <div class="skills webd"><img src="/assets/dg1.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="50" class="d-flex flex-column align-items-center mt-5">
+                      <small>Illustrator</small>
+                      <div class="skills webd"><img src="/assets/dg2.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-delay="100" class="d-flex flex-column align-items-center mt-5">
+                      <small>After effects</small>
+                      <div class="skills webd"><img src="/assets/dg3.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="150" class="d-flex flex-column align-items-center mt-5">
+                      <small>Indesign</small>
+                      <div class="skills webd"><img src="/assets/dg4.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1500" data-aos-easing="ease-out" data-aos-delay="200" class="d-flex flex-column align-items-center mt-5">
+                      <small>Adobe XD</small>
+                      <div class="skills webd"><img src="/assets/dg5.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1900" data-aos-easing="ease-out" data-aos-delay="250" class="d-flex flex-column align-items-center mt-5">
+                      <small>Figma</small>
+                      <div class="skills webd"><img src="/assets/dg7.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="2300" data-aos-easing="ease-out" data-aos-delay="300" class="d-flex flex-column align-items-center mt-5">
+                      <small>Corel Draw</small>
+                      <div class="skills webd"><img src="/assets/dg6.png" alt=""></div>
+                    </div>
+                  </div>
+                  
+                  <div class="textSkills webd">
+                    <p class="pt-5">Experienced with the Adobe Creative Suite, web layout, responsive design and brand management.</p>
+                  </div>
+                </div>   
+                     
+            </div>
+
+            <!-- web develop -->            
+            <div class="row d-flex justify-content-center mb-5">
+                <div class="sk d-flex flex-column align-items-center col-12 col-sm-6">
+                  <h1>WEB DEVELOP</h1>
+                  <div class="contSkills d-flex flex-wrap-reverse justify-content-evenly">
+                    <div data-aos="flip-left" data-aos-duration="600" data-aos-easing="ease-out" class="d-flex flex-column align-items-center mt-5">
+                      <small>Wordpress</small>
+                      <div class="skills"><img src="/assets/dev1.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="50" class="d-flex flex-column align-items-center mt-5">
+                      <small>Elementor</small>
+                      <div class="skills"><img src="/assets/dev2.png" alt=""></div>
+                    </div>
+                    <div data-aos="flip-left" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-delay="100" class="d-flex flex-column align-items-center mt-5">
+                      <small>Divi</small>
+                      <div class="skills"><img src="/assets/dev3.png" alt=""></div>
+                    </div>                    
+                  </div>
+                  
+                  <div class="textSkills mb-5">
+                    <p class="pt-5">Experienced creating webs with CMS like Wordpress using web builders like Elementor and Divi.</p>
+                  </div>
+                </div> 
+                     
+            </div>
+        
+        </section>
+
+        <!-- portfolio -->
+        <section id="portfolio" class="containerPortfolio row d-flex flex-column align-items-center">            
+            <div class="titleSection d-flex align-items-center justify-content-center col-12 col-lg-10">                             
+                <h3 data-aos="fade" data-aos-duration="400" data-aos-easing="ease-in" class="spanBig">
+                     <span>P</span>
+                     <span>O</span>
+                     <span>R</span>
+                     <span>T</span>
+                     <span>F</span>
+                     <span>O</span>                 
+                     <span>L</span>
+                     <span>I</span>
+                     <span>O</span>
+                </h3>
+                <h2 data-aos="fade" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in" class="span">
+                    <span>P</span>
+                     <span>O</span>
+                     <span>R</span>
+                     <span>T</span>
+                     <span>F</span>
+                     <span>O</span>                 
+                     <span>L</span>
+                     <span>I</span>
+                     <span>O</span>
+                </h2>  
+            </div>
+            
+            <h3 class="section-title text-center">Web apps</h3>
+
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="row d-flex align-items-center justify-content-center col-11 col-xl-10">
+
+                <div class="slider col-12 col-xl-5">
+                    <input type="radio" name="slider" id="s1" checked>
+                    <input type="radio" name="slider" id="s2">
+                    <input type="radio" name="slider" id="s3">
+                    <input type="radio" name="slider" id="s4">
+                    <input type="radio" name="slider" id="s5">
+                  
+                    <label for="s1" id="slide1"><img src="/assets/acq1.jpg" alt="acquerello index"></label>
+                    <label for="s2" id="slide2"><img src="/assets/acq2.jpg" alt="acquerello login"></label>
+                    <label for="s3" id="slide3"><img src="/assets/acq3.jpg" alt="acquerello order"></label>
+                    <label for="s4" id="slide4"><img src="/assets/acq4.jpg" alt="acquerello booking"></label>
+                    <label for="s5" id="slide5"><img src="/assets/acq5.jpg" alt="acquerello orders"></label>
+                </div>
+
+                <div class="col-12 col-xl-4">
+                    <h3 class="cOne"> Acquerello Italian Food</h3>
+                    <span class="cTwo"> Restaurant App</span>
+                    <p>Web app that strives to ease the work of buy, booking table and manage orders states to users. Also they can download an invoice and receive emails with the status of their orders. Admins can manage stock, add products or categories, manage orders and bookings. Made with its own API Rest, Java, Spring, Spring boot, Spring Security, Gradle, HTML5, CSS3, Bootstrap 5 and VueJs. </p>
+                    <div class="">
+                        <a href="https://github.com/britomluz/acquerello" target="_blank" class="btn">Repo Github</a>
+                        <a href="" target="_blank" class="btn">View site</a>
+                    </div>                                         
+                </div>     
+                 
+            </div>
+
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="row d-flex align-items-center justify-content-center col-11 col-md-10">
+
+                <div class="slider col-12 col-xl-5">
+                    <input type="radio" name="slider2" id="s11" checked>
+                    <input type="radio" name="slider2" id="s12">
+                    <input type="radio" name="slider2" id="s13">
+                    <input type="radio" name="slider2" id="s14">
+                    <input type="radio" name="slider2" id="s15">
+                  
+                    <label for="s11" id="slide11"><img src="/assets/mbb1.jpg" alt="homebanking index"></label>
+                    <label for="s12" id="slide12"><img src="/assets/mbb2.jpg" alt="homebanking home"></label>
+                    <label for="s13" id="slide13"><img src="/assets/mbb3.jpg" alt="homebanking accounts"></label>
+                    <label for="s14" id="slide14"><img src="/assets/mbb4.jpg" alt="homebanking cards"></label>
+                    <label for="s15" id="slide15"><img src="/assets/mbb5.jpg" alt="homebanking adminPanel"></label>
+                </div>
+
+                <div class="col-12 col-xl-4">
+                    <h3 class="cOne"> MBB Bank</h3>
+                    <span class="cTwo"> Homebanking App</span>
+                    <p>Banking aplication that allows user to create a bank account, make transactions, ask for loans and create debit/credit cards. User can see their account statement, transaction listing and an overview of existing credit card transactions screen appears. Made with its own API Rest, Java, Spring, Spring boot, Spring Security, Gradle, HTML5, CSS3, Bootstrap 5 and VueJs. </p>
+                    <div class="">
+                        <a href="https://github.com/britomluz/homebanking" target="_blank" class="btn">Repo Github</a>
+                        <a href="" target="_blank" class="btn">View site</a>
+                    </div>                     
+                </div>     
+                 
+            </div>
+
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="row d-flex align-items-center justify-content-center col-11 col-md-10">
+
+                <div class="slider col-12 col-xl-5">
+                    <input type="radio" name="slider3" id="s21" checked>
+                    <input type="radio" name="slider3" id="s22">
+                    <input type="radio" name="slider3" id="s23">
+                    <input type="radio" name="slider3" id="s24">
+                    <input type="radio" name="slider3" id="s25">
+                  
+                    <label for="s21" id="slide21"><img src="/assets/ps1.jpg" alt="francostore home"></label>
+                    <label for="s22" id="slide22"><img src="/assets/ps2.jpg" alt="francostore contact"></label>
+                    <label for="s23" id="slide23"><img src="/assets/ps3.jpg" alt="francostore modal"></label>
+                    <label for="s24" id="slide24"><img src="/assets/ps4.jpg" alt="francostore cart"></label>
+                    <label for="s25" id="slide25"><img src="/assets/ps5.jpg" alt="francostore shop"></label>
+                </div>
+
+                <div class="col-12 col-xl-4">
+                    <h3 class="cOne">FrancoStore</h3>
+                    <span class="cTwo"> Petshop ecommerce</span>
+                    <p>Ecommerce store with a friendly, modern and easy navigation. User can buy, the app has a shopping cart integrated with localstorage. Made with HTML5, CSS3, Bootstrap 5 and Vue Js.</p>
+                    <div class="">
+                        <a href="https://github.com/britomluz/FrancoStore" target="_blank" class="btn">Repo Github</a>
+                        <a href="https://britomluz.github.io/FrancoStore/index.html" target="_blank" class="btn">View</a>
+                    </div>                     
+                </div>     
+                 
+            </div>
+            
+            <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="row d-flex align-items-center justify-content-center col-11 col-md-10 mb-5">                
+
+                <div class="slider col-12 col-xl-7">
+                    <input type="radio" name="slider4" id="s31" checked>
+                    <input type="radio" name="slider4" id="s32">
+                    <input type="radio" name="slider4" id="s33">
+                    <input type="radio" name="slider4" id="s34">
+                    <input type="radio" name="slider4" id="s35">
+                  
+                    <label for="s31" id="slide31"><img src="/assets/tgif1.jpg" alt="tgif home"></label>
+                    <label for="s32" id="slide32"><img src="/assets/tgif2.jpg" alt="tgif house attendance"></label>
+                    <label for="s33" id="slide33"><img src="/assets/tgif3.jpg" alt="tgif senate attendance"></label>
+                    <label for="s34" id="slide34"><img src="/assets/tgif4.jpg" alt="tgif senators"></label>
+                    <label for="s35" id="slide35"><img src="/assets/tgif5.jpg" alt="tgif senators"></label>
+                </div>
+
+                <div class="col-12 col-xl-4 mb-5">
+                    <h3 class="cOne">TGIF United States</h3>
+                    <span class="cTwo">Transparent Goverment in Fact</span>
+                    <p>This web app consumes pro publica congress API. You can see list of congressmen and senators filtered by state and party. Made with HTML5, CSS3, Bootstrap 5 and Vue Js.</p>
+                    <div class="">
+                        <a href="https://github.com/britomluz/tgif-united-states" target="_blank" class="btn">Repo Github</a>
+                        <a href="https://britomluz.github.io/tgif-united-states/index.html" target="_blank" class="btn">View site</a>
+                    </div>                     
+                </div>    
+                 
+            </div>
+
+            <!-- portfolio design -->
+            <div  class="containerPortfolioDesign" id="portfolioDesign">
+                <div class="containerDesign">
+                    <h3 class="section-title text-center">Designs</h3>
+                    <p class="text-center cTwo">People ask me to show my brand projects so here is some of them</p>
+                    <div data-aos="fade" data-aos-duration="1000" data-aos-delay="200" class="row d-flex justify-content-center">
+                        <div id="masonry">
+                            <img src="assets/iv1.jpg">
+                            <img src="assets/CL.png">
+                            <img src="assets/cleva1.jpg">
+                            <img src="assets/B.png">
+                            <img src="assets/defled2.jpg">
+                            <img src="assets/shukria3.jpg">
+                            <img src="assets/imagine.png">
+                            <img src="assets/MF2.png">
+                            <img src="assets/BV.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       
+
+        <!-- contact -->
+        <section id="contact" class="containerContact row d-flex flex-column align-items-center">
+            <div class="titleSection d-flex align-items-center justify-content-center col-12 col-lg-10">                             
+                <h3 data-aos="fade" data-aos-duration="400" data-aos-easing="ease-in" class="spanBig">
+                     <span>C</span>
+                     <span>O</span>
+                     <span>N</span>
+                     <span>T</span>
+                     <span>A</span>                 
+                     <span>C</span>
+                     <span>T</span>
+                     <span>&nbsp;</span>
+                     <span>M</span>
+                     <span>E</span>
+                </h3>
+                <h2 data-aos="fade" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in" class="span">
+                    <span>C</span>
+                     <span>O</span>
+                     <span>N</span>
+                     <span>T</span>
+                     <span>A</span>                 
+                     <span>C</span>
+                     <span>T</span>
+                     <span>&nbsp;</span>
+                     <span>M</span>
+                     <span>E</span>
+                </h2>  
+            </div>
+            <div class="d-flex flex-column justify-content-between col-10 mt-5">
+                <div class="pt-2" data-aos="fade" data-aos-duration="600" data-aos-delay="400" data-aos-easing="ease-in">
+                    <h3 class="text-center cTwo">TEXT ME</h3>
+                    <div class="d-flex flex-wrap justify-content-evenly align-items-center">
+                        <div class="d-flex flex-wrap justify-content-center align-items-center">
+                            <i class="bi bi-envelope-fill cOne fs-1"></i>
+                            <a href="mailto:britomluz@gmail.com" target="_blank" class="fs-2">britomluz@gmail.com</a>
+                        </div>
+                        <div>
+                            <i class="bi bi-whatsapp cOne fs-1"></i>
+                            <a href="https://wa.me/543513557206" target="_blank" class="fs-2">+54 351 3557206</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5" data-aos="fade" data-aos-duration="600" data-aos-delay="800" data-aos-easing="ease-in">
+                    <h3 class="text-center cTwo">ADRESS</h3>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center">
+                        <i class="bi bi-geo-alt-fill cOne fs-1"></i>
+                        <a class="fs-2">Córdoba, Argentina</a>
+                    </div>                    
+                </div>
+                <div class="d-flex flex-wrap flex-column mt-5 mb-5" data-aos="fade" data-aos-duration="600" data-aos-delay="1300" data-aos-easing="ease-in">
+                    <h3 class="text-center cTwo"> FIND ME ON </h3>
+                    
+                    <div class="d-flex flex-wrap justify-content-evenly align-items-center">
+                        <div class="d-flex">                        
+                            <i class="bi bi-github cOne fs-1"></i>
+                            <a href="https://github.com/britomluz" target="_blank" class="fs-2">/britomluz</a>
+                        </div>
+                        
+                        <div class="d-flex">                        
+                            <i class="bi bi-linkedin cOne fs-1"></i>
+                            <a href="https://www.linkedin.com/in/maria-luz-brito/" target="_blank" class="fs-2">/maria-luz-brito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+        <div class="footer">
+            <div class="d-flex justify-content-center">
+                <h6 class="text-center">Copyright | &nbsp;</h6>
+                <h6 class="text-center"> Powered by <span class=""><b>Luz Brito</b></span></h6>                
+            </div>
+        </div>
+
+        <!-- customize theme -->
+        <!--=============== Theme Customize ===============-->
+       
+        <div class="customize-theme">
+            <div class="card">
+                <h2 class="cOne">Customize your view</h2>
+                <p>Change language, font size, color and background</p>
+                <!-- language -->
+                <div class="language">
+                    <h3>Language</h3>
+                    <div>
+                        <span class="en cLight">English</span>
+                        <input type="checkbox" class="check" @click="language" id="language">
+                        <span class="es cLight">Spanish</span>
+                    </div>                    
+                </div>
+                <!-- font size -->
+                <div class="font-size">
+                    <h3>Font Size</h3>
+                    <div>
+                        <h6 class="cWhite">Aa</h6>
+                        <div class="choose-size">
+                            <span class="font-size-1"></span>
+                            <span class="font-size-2"></span>
+                            <span class="font-size-3 active"></span>
+                            <span class="font-size-4"></span>
+                        </div>
+                        <h3 class="cWhite">Aa</h3>
+                    </div>
+                </div>
+                <!-- color -->
+                <div class="color">
+                    <h3>Color</h3>
+                    <div class="choose-color">
+                        <span class="color-1 active"></span>
+                        <span class="color-2"></span>
+                        <span class="color-3"></span>
+                        <span class="color-4"></span>
+                        <span class="color-5"></span>
+                    </div>
+                </div>
+                <!-- background -->
+                <div class="background">
+                    <h3>Background</h3>
+                    <div class="choose-bg">
+                        <div class="bg-1 active">
+                            <span></span>
+                            <h5 for="bg-1">Dark</h5>
+                        </div>
+                        
+                        <div class="bg-3">
+                            <span></span>
+                            <h5 for="bg-3">Light</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    
+
+    <!-- JavaScript Bundle with Popper -->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@next"></script>        
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/typing.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
