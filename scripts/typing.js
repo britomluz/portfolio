@@ -71,14 +71,26 @@ let songIndex = 2;
 let ruta1 = './'
 let ruta2 = '../'
 // Initially load song details into DOM
-loadSong(ruta1, songs[songIndex]);
-loadSong(ruta2, songs[songIndex]);
+loadSong(songs[songIndex]);
+//loadSong(ruta2, songs[songIndex]);
 
 // Update song details
-function loadSong(ruta, song) {
+function loadSong(song) {
   title.innerText = song;
-  audio.src = `${ruta}music/${song}.mp3`;
-  cover.src = `${ruta}assets/${song}.jpg`;  
+   audio.src = `./music/${song}.mp3`;
+   cover.src = `./assets/${song}.jpg`;  
+
+
+  // audio.src = `${ruta}music/${song}.mp3`;
+  // cover.src = `${ruta}assets/${song}.jpg`;  
+
+//   if(window.location.href == 'es/index.html'){
+//        audio.src = `../music/${song}.mp3`;
+//        cover.src = `../assets/${song}.jpg`; 
+// } else {
+//       audio.src = `./music/${song}.mp3`;
+//       cover.src = `./assets/${song}.jpg`; 
+// }
    
 }
 

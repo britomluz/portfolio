@@ -12,9 +12,9 @@ const App = {
 
 
             if(id == true){
-                window.location.href = "es/index.html"
+                window.location.href = "es-index.html"
             } else {
-                window.location.href = "../index.html"
+                window.location.href = "index.html"
             }
         },
         
