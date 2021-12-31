@@ -124,7 +124,7 @@ div.containerMenu a {
     cursor: pointer;
 }
 .nav-link:hover{
-  color: white;
+  color: var(--color-light);
 }
 #navbar{
     position: fixed;    
