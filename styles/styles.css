@@ -1306,18 +1306,27 @@ div#masonry:hover img:hover { opacity: 1; }
     font-size: 2em;
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
-    line-height: 1em;    
+    line-height: 1em;  
+    display: block;  
+    margin-bottom: 20px;  
   }
   
   .home h2{ font-size: 1.8em; }
-  .home h5{ font-size: 1.2em; }
+  .home h5{ font-size: 1.2em; display: inline-block;}
+
+  .audioPlayer{
+    margin-top: 80px;
+  }
 }
 @media screen and (max-width:320px) {
   .navLinks{display: none;}
 
   .home h2{ font-size: 1.5em; }
-  .home h5{ font-size: 1.2em; }
-  .myN { display: inline;}
+  .home h5{
+    font-size: 1.2em; 
+    display: inline-block;
+  }
+  
 
   .slider {
     position: relative;    
@@ -1335,7 +1344,9 @@ div#masonry:hover img:hover { opacity: 1; }
     font-size: 1.5em;
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
-    line-height: 1em;    
+    line-height: 1em;  
+    display: block;  
+    margin-bottom: 20px;
   }
 }
 
