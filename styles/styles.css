@@ -1300,19 +1300,24 @@ div#masonry:hover img:hover { opacity: 1; }
     
   }
   .music-container {    
-    margin: 40px 0;   
+    margin: 20px 0 100px 0;   
   }
   .home .textTitle span{
-    font-size: 3.2em;
+    font-size: 2em;
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
     line-height: 1em;    
   }
+  
+  .home h2{ font-size: 1.8em; }
+  .home h5{ font-size: 1.2em; }
 }
 @media screen and (max-width:320px) {
   .navLinks{display: none;}
 
-  .home h2{ font-size: 2.3em; }
+  .home h2{ font-size: 1.5em; }
+  .home h5{ font-size: 1.2em; }
+  .myN { display: inline;}
 
   .slider {
     position: relative;    
@@ -1327,7 +1332,7 @@ div#masonry:hover img:hover { opacity: 1; }
     font-size: 2.1em;
   }
   .home .textTitle span{
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-family: 'Manrope', sans-serif;
     font-weight: bolder;
     line-height: 1em;    
