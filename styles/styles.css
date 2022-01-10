@@ -1278,6 +1278,10 @@ div#masonry:hover img:hover { opacity: 1; }
     font-weight: bolder;
     line-height: 1em;    
   }
+  .home .hi{
+    margin-top: 20px;
+  }
+  
 }
 @media screen and (max-width:425px) {
   div#masonry { 
@@ -1316,6 +1320,9 @@ div#masonry:hover img:hover { opacity: 1; }
 
   .audioPlayer{
     margin-top: 80px;
+  }
+  .home .hi{
+    margin-top: 0;
   }
 }
 @media screen and (max-width:320px) {
